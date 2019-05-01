@@ -1,0 +1,48 @@
+{
+  "name": "react-native-circular-timer",
+  "version": "0.0.1",
+  "description": "Circular Timer component for React Native.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "src/"
+  ],
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react-native-collage",
+    "react native",
+    "react native collage",
+    "react",
+    "mobile",
+    "ios",
+    "android",
+    "ui",
+    "image",
+    "collage"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meharbhutta/react-native-circular-timer.git"
+  },
+  "author": "Muhammad Mehar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meharbhutta/react-native-circular-timer/issues"
+  },
+  "homepage": "https://github.com/meharbhutta/react-native-circular-timer#readme",
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "^24.7.1",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "prettier": "^1.16.4"
+  }
+}
