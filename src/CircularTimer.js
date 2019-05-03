@@ -41,24 +41,42 @@ export default class CircularTimer extends React.Component {
   }
 
   componentDidMount() {
+    this._start();
+  }
+
+  _start = () => {
     this.timer = setInterval(() => {
       const { elapsedTime, rotate } = this.state,
         { seconds, onTimeElapsed } = this.props;
       if (elapsedTime > 0)
-        this.setState({
-          elapsedTime: elapsedTime - 1,
-          rotate: rotate + 360 / seconds
-        });
-      else if (this.timer) {
-        clearInterval(this.timer);
-        onTimeElapsed();
-      }
+        this.setState(
+          {
+            elapsedTime: elapsedTime - 1,
+            rotate: rotate + 360 / seconds
+          },
+          () => {
+            if (elapsedTime - 1 === 0) onTimeElapsed();
+          }
+        );
+      else if (this.timer) clearInterval(this.timer);
     }, 1000);
-  }
+  };
 
   componentWillUnmount() {
     if (this.timer) clearInterval(this.timer);
   }
+
+  restart = () => {
+    this.setState(
+      {
+        elapsedTime: this.props.seconds,
+        rotate: 0
+      },
+      () => {
+        this._start();
+      }
+    );
+  };
 
   render() {
     const { elapsedTime, rotate } = this.state,
