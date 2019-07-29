@@ -10,12 +10,14 @@ export default class CircularTimer extends React.Component {
   static propTypes = {
     seconds: PropTypes.number.isRequired,
     radius: PropTypes.number.isRequired,
+    showSecond: PropTypes.bool,
     borderWidth: PropTypes.number,
     borderColor: PropTypes.string,
     borderBackgroundColor: PropTypes.string,
     circleColor: PropTypes.string,
     style: ViewPropTypesStyle,
     textStyle: Text.propTypes.style,
+    secondStyle: Text.propTypes.style,
     onTimeElapsed: PropTypes.func
   };
 
@@ -26,8 +28,10 @@ export default class CircularTimer extends React.Component {
     borderWidth: 10,
     radius: 40,
     seconds: 60,
+    showSecond: false,
     style: null,
     textStyle: null,
+    secondStyle: null,
     onTimeElapsed: () => {}
   };
 
@@ -80,7 +84,7 @@ export default class CircularTimer extends React.Component {
 
   render() {
     const { elapsedTime, rotate } = this.state,
-      { seconds, borderColor, borderBackgroundColor, circleColor, style, textStyle, radius, borderWidth } = this.props,
+      { seconds, showSecond, borderColor, borderBackgroundColor, circleColor, style, textStyle, secondStyle, radius, borderWidth } = this.props,
       check = elapsedTime > seconds / 2,
       leftHalfBackColor = check ? borderColor : 'transparent',
       rightHalfBackColor = check ? 'transparent' : borderBackgroundColor,
@@ -141,6 +145,7 @@ export default class CircularTimer extends React.Component {
         </View>
         <View style={{ ...__styles.circle, ...innerCircle, backgroundColor: circleColor }}>
           <Text style={textStyle}>{elapsedTime}</Text>
+          {showSecond && <Text style={secondStyle}>sec</Text>}
         </View>
       </View>
     );

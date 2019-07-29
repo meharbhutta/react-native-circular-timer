@@ -10,7 +10,7 @@ Circular Timer component for React Native
 
 ## NPM
 
-- stable release version: ![version](https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000)
+- stable release version: ![version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
 - package downloads: ![downloads](https://img.shields.io/badge/downloads-22%2Fweek-brightgreen.svg?cacheSeconds=2592000)
 - [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
@@ -62,6 +62,7 @@ export default class App extends Component<Props> {
                 onTimeElapsed={() => {
                     console.log('Timer Finished!');
                 }}
+                showSecond={true}
             />
         </View>
         );
@@ -75,12 +76,14 @@ export default class App extends Component<Props> {
 | :--------------------- | :------------------------------------------------------------------------------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
 | seconds | number | yes |  Time in seconds  |  |
 | radius | number | yes | Radius of the circle |  |
+| showSecond | boolean | no | To show the `sec` keyword with timer | `false` |
 | borderWidth | number | no | The border width of the circle | `10` |
 | borderColor | string | no | The color of the border | `"#0E3657"` |
 | borderBackgroundColor | string | no | The background color of the border | `"#A8C3BC"` |
 | circleColor | string | no | The color of the circle | `"#FFF"` |
-| style | object | no | To apply style to the timer |
+| style | object | no | To apply style to the timer |  |
 | textStyle | object  | no | To override the text style | default |
+| secondStyle | object  | no | To override the second style | default |
 | onTimeElapsed | function | no | Callback for the timer end | () => {} |
 
 ### Methods

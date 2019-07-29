@@ -19,6 +19,7 @@ export default class App extends Component<Props> {
           onTimeElapsed={() => {
             console.log('Timer Finished!');
           }}
+          showSecond={true}
         />
       </View>
     );
