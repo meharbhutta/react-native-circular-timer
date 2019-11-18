@@ -48,8 +48,12 @@ export default class CircularTimer extends React.Component {
     this._start();
   }
 
+  _clearTimer = () => {
+    if (this._timer) clearInterval(this._timer);
+  };
+
   _start = () => {
-    this.timer = setInterval(() => {
+    this._timer = setInterval(() => {
       const { elapsedTime, rotate } = this.state,
         { seconds, onTimeElapsed } = this.props;
       if (elapsedTime > 0)
@@ -62,15 +66,12 @@ export default class CircularTimer extends React.Component {
             if (elapsedTime - 1 === 0) onTimeElapsed();
           }
         );
-      else if (this.timer) clearInterval(this.timer);
+      else this._clearTimer();
     }, 1000);
   };
 
-  componentWillUnmount() {
-    if (this.timer) clearInterval(this.timer);
-  }
-
   restart = () => {
+    this._clearTimer();
     this.setState(
       {
         elapsedTime: this.props.seconds,
@@ -82,9 +83,24 @@ export default class CircularTimer extends React.Component {
     );
   };
 
+  componentWillUnmount() {
+    this._clearTimer();
+  }
+
   render() {
     const { elapsedTime, rotate } = this.state,
-      { seconds, showSecond, borderColor, borderBackgroundColor, circleColor, style, textStyle, secondStyle, radius, borderWidth } = this.props,
+      {
+        seconds,
+        showSecond,
+        borderColor,
+        borderBackgroundColor,
+        circleColor,
+        style,
+        textStyle,
+        secondStyle,
+        radius,
+        borderWidth
+      } = this.props,
       check = elapsedTime > seconds / 2,
       leftHalfBackColor = check ? borderColor : 'transparent',
       rightHalfBackColor = check ? 'transparent' : borderBackgroundColor,

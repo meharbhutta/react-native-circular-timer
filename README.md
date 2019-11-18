@@ -11,7 +11,7 @@ Circular Timer component for React Native
 
 ## NPM
 
-- stable release version: ![version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+- stable release version: ![version](https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000)
 - package downloads: ![downloads](https://img.shields.io/badge/downloads-22%2Fweek-brightgreen.svg?cacheSeconds=2592000)
 - [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
@@ -29,19 +29,13 @@ npm i react-native-circular-timer --save
 
 ### Basic Usage
 
-- Install react-native-cli first
-
-```bash
-$ npm install -g react-native-cli
-```
-
-### Note: [GUIDE](https://facebook.github.io/react-native/docs/getting-started)
-
 - Initialization of a react-native project
 
 ```bash
-$ react-native init AwesomeProject
+$ npx react-native init AwesomeProject
 ```
+
+### Note: [GUIDE](https://facebook.github.io/react-native/docs/getting-started)
 
 - Then, edit `AwesomeProject/App.js`, like this:
 
@@ -118,15 +112,16 @@ export default class App extends Component<Props> {
 | :------ | :------------------------- |
 | restart | To restart the timer again |
 
-### Note: Firstly, you need to create reference of the component and then call the restart method using that reference [GUIDE](https://stackoverflow.com/questions/37949981/call-child-method-from-parent).
+### Note: 
+Firstly, you need to create reference of the component and then call the restart method using that reference [GUIDE](https://stackoverflow.com/questions/37949981/call-child-method-from-parent).
 
 ### To run example
 
 ```bash
 cd example
 npm install
-react-native run-android (For android)
-react-native run-ios (For ios)
+npx react-native run-android (For android)
+npx react-native run-ios (For ios)
 ```
 
 #### In case of any issue follow the [GUIDE](https://facebook.github.io/react-native/docs/getting-started).
