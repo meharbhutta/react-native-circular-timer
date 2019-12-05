@@ -1,22 +1,33 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
-  "rules": {
-    "semi": [2, "never"],
-    "max-len": [
-      1,
-      120,
-      2,
-      {
-        "ignoreComments": true
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "plugins": ["react", "react-native", "flowtype", "import"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "@react-native-community"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".android.js", ".ios.js", ".json"]
       }
-    ],
-    "react/jsx-filename-extension": 0,
-    "linebreak-style": 0,
-    "react/prefer-stateless-function": 0,
-    "import/no-named-as-default": 0,
-    "import/no-named-as-default-member": 0,
-    "import/prefer-default-export": 0,
-    "no-confusing-arrow": 0
+    }
+  },
+  "globals": {
+    "__DEV__": true
   }
 }

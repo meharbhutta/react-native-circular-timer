@@ -11,7 +11,7 @@ Circular Timer component for React Native
 
 ## NPM
 
-- stable release version: ![version](https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000)
+- stable release version: ![version](https://img.shields.io/badge/version-1.1.1-blue.svg?cacheSeconds=2592000)
 - package downloads: ![downloads](https://img.shields.io/badge/downloads-22%2Fweek-brightgreen.svg?cacheSeconds=2592000)
 - [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
@@ -125,3 +125,17 @@ npx react-native run-ios (For ios)
 ```
 
 #### In case of any issue follow the [GUIDE](https://facebook.github.io/react-native/docs/getting-started).
+
+### Supported React Native Versions  
+
+This project aims to support any version of React Native.
+
+If you require new features or bug fixes for older versions you can fork this project.
+
+### Credits
+
+The idea for this modules came from MrToph react-native-countdown-circle package.
+
+### Licenses
+
+CircularTimer - MIT © MeharBhutta
