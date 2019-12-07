@@ -1,3 +1,9 @@
+#### 1.1.4-5 (2019-12-07)
+
+##### Documentation Changes
+
+*  stable release updated ([c4d779e0](https://github.com/meharbhutta/react-native-circular-timer/commit/c4d779e084ce9308f40be0b6b77f31e58ac072fb))
+
 #### 1.1.3-4 (2019-12-07)
 
 ##### New Features
