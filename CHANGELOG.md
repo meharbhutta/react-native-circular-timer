@@ -1,3 +1,9 @@
+#### 1.1.3-4 (2019-12-07)
+
+##### New Features
+
+* **template:**  github template added ([da45c6b4](https://github.com/meharbhutta/react-native-circular-timer/commit/da45c6b4beda51abb8b3415bbaf45394c1259583))
+
 #### 1.1.2-3 (2019-12-05)
 
 ##### Documentation Changes
